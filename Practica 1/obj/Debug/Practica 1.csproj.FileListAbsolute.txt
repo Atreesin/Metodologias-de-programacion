@@ -1,0 +1,8 @@
+C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\Practica 1\Practica 1\bin\Debug\Practica 1.exe.config
+C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\Practica 1\Practica 1\bin\Debug\Practica 1.exe
+C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\Practica 1\Practica 1\bin\Debug\Practica 1.pdb
+C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\Practica 1\Practica 1\obj\Debug\Practica 1.csproj.AssemblyReference.cache
+C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\Practica 1\Practica 1\obj\Debug\Practica 1.csproj.SuggestedBindingRedirects.cache
+C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\Practica 1\Practica 1\obj\Debug\Practica 1.csproj.CoreCompileInputs.cache
+C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\Practica 1\Practica 1\obj\Debug\Practica 1.exe
+C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\Practica 1\Practica 1\obj\Debug\Practica 1.pdb
