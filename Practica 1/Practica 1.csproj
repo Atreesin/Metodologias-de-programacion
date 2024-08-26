@@ -52,7 +52,6 @@
     <Compile Include="Interfaces\Comparable.cs" />
     <Compile Include="Classes\Numero.cs" />
     <Compile Include="Classes\Pila.cs" />
-    <Compile Include="Practica1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

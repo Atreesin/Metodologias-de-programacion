@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace Practica_1.Classes
 {
+    
     //EJERCICIO 15
-    class Alumno : Persona, Comparable
+    class Alumno : Persona
     {
+        //PARAMETRO ADICIONAL DE CLASE QUE DETERMINA EL CRITERIO DE COMPARACION ENTRE ELEMENTOS DEL TIPO ALUMNO
+        private static string compararAlumnosPor = "legajo";
+        //********************************************************************************************
         private Numero legajo;
         private Numero promedio;
 
@@ -23,48 +27,193 @@ namespace Practica_1.Classes
 
         public override string ToString()
         {
-            return $"Alumno: \nLegajo: {this.legajo} \nNombre: {this.nombre} Dni: {this.dni}\nPromedio:{promedio}";
+            return $"Alumno: \nLegajo: {this.legajo} \nNombre: {this.nombre} \nDni: {this.dni}\nPromedio:{promedio}";
         }
+        //FIN EJERCICIO 15
 
         //EJERCICIO 18
-        //Esta vez fue necesario decir explicitamente que alumno implementa la interfaz comparable
-        public bool sosIgual(Comparable alumno)
+        
+        public override bool sosIgual(Comparable alumno)
         {
-            if (this.CompareTo(alumno) == 0)
+            /*EN CASO DE QUE SOLO SE PUEDAN COMPARAR POR LEGAJO
+             * if (this.legajo.sosIgual(((Alumno)alumno).getLegajo()))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+            */
+            switch (compararAlumnosPor)
             {
-                return true;
-            }
-            else
-            {
-                return false;
+                case "nombre":
+                    if (this.nombre == ((Alumno)alumno).getNombre())
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                case "dni":
+                    if (this.dni.sosIgual(((Alumno)alumno).getDni()))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                case "legajo":
+                    if (this.legajo.sosIgual(((Alumno)alumno).getLegajo()))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                default:
+                    return false;
             }
         }
 
-        public bool sosMenor(Comparable alumno)
+        public override bool sosMenor(Comparable alumno)
         {
-            if (this.CompareTo(alumno) == -1)
+            /*EN CASO DE QUE SOLO SE PUEDAN COMPARAR POR LEGAJO
+             * if (this.legajo.sosMenor(((Alumno)alumno).getLegajo()))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+            */
+            switch (compararAlumnosPor)
             {
-                return true;
+                case "nombre":
+                    if (string.Compare(this.nombre, ((Alumno)alumno).getNombre()) < 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                case "dni":
+                    if (this.dni.sosMenor(((Alumno)alumno).getDni()))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                case "legajo":
+                    if (this.legajo.sosMenor(((Alumno)alumno).getLegajo()))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                case "promedio":
+                    if (this.promedio.sosMenor(((Alumno)alumno).getPromedio()))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                default:
+                    return false;
+                }
             }
-            else
+
+        public override bool sosMayor(Comparable alumno)
+        {
+            /*EN CASO DE QUE SOLO SE PUEDAN COMPARAR POR LEGAJO
+             * if (this.legajo.sosMayor(((Alumno)alumno).getLegajo()))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+            */
+            switch (compararAlumnosPor)
             {
-                return false;
+                case "nombre":
+                    if (string.Compare(this.nombre, ((Alumno)alumno).getNombre()) > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                case "dni":
+                    if (this.dni.sosMayor(((Alumno)alumno).getDni()))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                case "legajo":
+                    if (this.legajo.sosMayor(((Alumno)alumno).getLegajo()))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                case "promedio":
+                    if (this.promedio.sosMayor(((Alumno)alumno).getPromedio()))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                default:
+                    return false;
             }
         }
-
-        public bool sosMayor(Comparable alumno)
+        //FIN EJERCICIO 18
+        public static void setCompararAlunoPor(string criterio) 
         {
-            if (this.CompareTo(alumno) == 1)
+            if (criterio == "nombre" || criterio == "dni" || criterio == "promedio" || criterio == "legajo")
             {
-                return true;
+                compararAlumnosPor = criterio;
             }
             else
             {
-                return false;
+                compararAlumnosPor = "nombre";
             }
         }
 
         //
+        /*no aplica
         protected int CompareTo(Object obj)
         {
             int resultado = 2;
@@ -149,5 +298,6 @@ namespace Practica_1.Classes
                 throw (new Exception("El elemento no es una persona o un numero"));
             }
         }
+        */
+        }
     }
-}

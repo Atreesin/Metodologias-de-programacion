@@ -23,7 +23,7 @@ namespace Practica_1
             el “comparable” recibido por parámetro,
             devuelve falso en caso contrario */
 
-            if (this.CompareTo(n) == 0)
+            if (this.valor == ((Numero)n).getValor() )
             {
                 return true;
             }
@@ -40,7 +40,7 @@ namespace Practica_1
             el “comparable” recibido por parámetro,
             devuelve falso en caso contrario */
 
-            if (this.CompareTo(n) == -1)
+            if (this.valor < ((Numero)n).getValor())
             {
                 return true;
             }
@@ -56,7 +56,7 @@ namespace Practica_1
             que recibe el mensaje es más grande que
             el “comparable” recibido por parámetro,
             devuelve falso en caso contrario */
-            if (this.CompareTo(n) == 1)
+            if (this.valor > ((Numero)n).getValor())
             {
                 return true;
             }
@@ -67,6 +67,7 @@ namespace Practica_1
         }
         
         //metodos auxiliares
+        /*
         private int CompareTo(Object obj)
         {
             var n = obj as Numero;
@@ -94,6 +95,7 @@ namespace Practica_1
 
             return resultado;
         }
+        */
 
         public override string ToString()
         {

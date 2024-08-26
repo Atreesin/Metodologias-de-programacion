@@ -9,9 +9,10 @@ namespace Practica_1.Classes
     //EJERCICIO 11
     class Persona : Comparable
     {
+        protected static string compararPor = "nombre";
         protected string nombre;
         protected Numero dni;
-
+        
         public Persona(string nombre, Numero dni)
         {
             this.nombre = nombre;
@@ -23,43 +24,105 @@ namespace Practica_1.Classes
         public Numero getDni() {  return dni; }
 
         // metodos de Comparable
-        public bool sosIgual(Comparable persona)
+        public virtual bool sosIgual(Comparable persona)
         {
-            if (this.CompareTo(persona) == 0)
+            if(compararPor == "dni")
             {
-                return true;
+                if (this.dni.sosIgual(((Persona)persona).getDni()))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {
-                return false;
+                if (this.nombre == ((Persona)persona).getNombre())
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
+            
+
         }
 
-        public bool sosMenor(Comparable persona)
+        public virtual bool sosMenor(Comparable persona)
         {
-            if (this.CompareTo(persona) == -1)
+            if (compararPor == "dni")
             {
-                return true;
+                if (this.dni.sosMenor(((Persona)persona).getDni()))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {
-                return false;
+                if (string.Compare(this.nombre ,((Persona)persona).getNombre()) < 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
+            
+            
         }
 
-        public bool sosMayor(Comparable persona)
+        public virtual bool sosMayor(Comparable persona)
         {
-            if (this.CompareTo(persona) == 1)
+            if (compararPor == "dni")
             {
-                return true;
+                if (this.dni.sosMayor(((Persona)persona).getDni()))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {
-                return false;
+                if (string.Compare(this.nombre, ((Persona)persona).getNombre()) > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            
+        }
+
+        //metodo adicional
+        public static void setCompararPor(string criterio)
+        {
+            if (criterio == "nombre" || criterio == "dni")
+            {
+                compararPor = criterio;
+            }
+            else
+            {
+                compararPor = "nombre";
             }
         }
 
         //metodos auxiliares
+
+        /*no aplica
         protected int CompareTo(Object obj)
         {
             int resultado = 2;
@@ -120,6 +183,7 @@ namespace Practica_1.Classes
 
             return resultado;
         }
+        */
 
         public override string ToString()
         {

@@ -14,12 +14,12 @@ namespace Practica_1
         private List<Comparable> datos = new List<Comparable>();
                 
 
-        public void push(Comparable c)
+        public void apilar(Comparable c)
         {
             this.datos.Add(c);
         }
         
-        public Comparable pop()
+        public Comparable desapilar()
         {
             if (!this.esVacia())
             {
@@ -44,7 +44,7 @@ namespace Practica_1
             return this.datos.Count == 0;
         }
 
-        /* metodos de la interfaz */
+        /* metodos de la interface */
 
         public int cuantos()
         {
@@ -78,7 +78,7 @@ namespace Practica_1
 
         public void agregar(Comparable elem)
         {
-            this.push(elem);
+            this.apilar(elem);
         }
 
         public bool contiene(Comparable elem)
