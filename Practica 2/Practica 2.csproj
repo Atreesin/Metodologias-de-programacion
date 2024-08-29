@@ -43,6 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Alumno.cs" />
+    <Compile Include="Classes\Cola.cs" />
+    <Compile Include="Classes\ColeccionMultiple.cs" />
+    <Compile Include="Classes\Numero.cs" />
+    <Compile Include="Classes\NumeroRandom.cs" />
+    <Compile Include="Classes\Persona.cs" />
+    <Compile Include="Classes\Pila.cs" />
+    <Compile Include="Interfaces\Coleccionable.cs" />
+    <Compile Include="Interfaces\Comparable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

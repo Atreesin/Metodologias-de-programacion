@@ -34,16 +34,7 @@ namespace Practica_1
 
         static void Main(string[] args)
         {
-            /* test
-            Numero num1 = new Numero(5);
-            Numero num2 = new Numero(10);
-            Numero num3 = new Numero(5);
             
-            Console.WriteLine($"{num1.getValor()} es igual que {num2.getValor()}: {num1.sosIgual(num2)}");
-            Console.WriteLine($"{num1.getValor()} es mayor que {num2.getValor()}: {num1.sosMayor(num2)}");
-            Console.WriteLine($"{num1.getValor()} es menor que {num2.getValor()}: {num1.sosMenor(num2)}");
-            Console.WriteLine($"{num1.getValor()} es igual que {num3.getValor()}: {num1.sosIgual(num3)}");
-            */
 
             //EJERCICIO 7
             Pila pila = new Pila();
@@ -73,12 +64,6 @@ namespace Practica_1
             Console.WriteLine(separador);
             Console.ReadKey();
             
-            /*test
-            Console.WriteLine($"Cantidad de nombres: {nombres.Count}");
-            Console.WriteLine($"Cantidad de apellidos: {apellidos.Count}");
-            
-            Console.WriteLine($"Cantidad de nombres: {nombres[15]}");
-            */
 
             //EJERCICIO 13
             Pila pilaDePersonas = new Pila();
@@ -167,22 +152,7 @@ namespace Practica_1
         public static void informarPersonas(Coleccionable coleccionable)
         {
             Console.Clear();
-            Console.WriteLine("Ingrese un numero para elegir el criterio de comparacion:\n1 - por Nombre\n2 - por DNI");
-            int opcion = ingresarEntero(1, 2);
             
-            switch (opcion)
-            {
-                case 1:
-                    Persona.setCompararPor("nombre");
-                    break;
-                case 2:
-                    Persona.setCompararPor("dni");
-                    break;
-                
-                default:
-                    break;
-            }
-
             Console.WriteLine($"La colección tiene {coleccionable.cuantos()} elementos.");
             Console.WriteLine($"El Elemento de menor valor de la coleccion es: {coleccionable.minimo()}");
             Console.WriteLine($"El Elemento de mayor valor de la coleccion es: {coleccionable.maximo()}");
@@ -190,86 +160,28 @@ namespace Practica_1
             Console.ReadKey();
             Console.Clear();
 
-            Console.WriteLine("Ingrese un numero para elegir el criterio de busqueda:\n1 - por Nombre\n2 - por DNI");
-            opcion = ingresarEntero(1, 2);
-
-            switch (opcion)
-            {
-                case 1:
-                    Persona.setCompararPor("nombre");
-                    break;
-                case 2:
-                    Persona.setCompararPor("dni");
-                    break;
-
-                default:
-                    break;
-            }
+            
             Comparable dni = new Numero(0);
-            string nombre = "";
-
-            if (opcion == 1)
-            {
-                Console.WriteLine("ingrese el nombre:");
-                nombre = Console.ReadLine();
-            }
-            else
-            {
-                Console.WriteLine("ingrese el dni:");
-                dni = new Numero(ingresarEntero());
-            }
-
-            Persona persona = new Persona(nombre, (Numero)dni);
+            
+            Console.WriteLine("ingrese el dni:");
+            dni = new Numero(ingresarEntero());
+            
+            Persona persona = new Persona("", (Numero)dni);
 
             if (coleccionable.contiene(persona))
             {
-                if(opcion == 1)
-                {
-                    Console.WriteLine($"La persona con el nombre {nombre} esta en la colección.");
-                }
-                else
-                {
-                    Console.WriteLine($"La persona con el dni {dni} esta en la colección.");
-                }
-                
+                Console.WriteLine($"La persona con el dni {dni} esta en la colección.");
             }
             else
             {
-                if (opcion == 1)
-                {
-                    Console.WriteLine($"La persona con el nombre {nombre} no esta en la colección.");
-                }
-                else
-                {
-                    Console.WriteLine($"La persona con el dni {dni} no esta en la colección.");
-                }
+                Console.WriteLine($"La persona con el dni {dni} no esta en la colección.");
             }
         }
 
         public static void informarAlumnos(Coleccionable coleccionable)
         {
             Console.Clear();
-            Console.WriteLine("Ingrese un numero para elegir el criterio de comparacion:\n1 - por Nombre\n2 - por DNI\n3 - por legajo\n4 - por promedio(el primero que encuentre)");
-            int opcion = ingresarEntero(1, 4);
-
-            switch (opcion)
-            {
-                case 1:
-                    Alumno.setCompararAlunoPor("nombre");
-                    break;
-                case 2:
-                    Alumno.setCompararAlunoPor("dni");
-                    break;
-                case 3:
-                    Alumno.setCompararAlunoPor("legajo");
-                    break;
-                case 4:
-                    Alumno.setCompararAlunoPor("promedio");
-                    break;
-
-                default:
-                    break;
-            }
+            
             Console.WriteLine($"La colección tiene {coleccionable.cuantos()} elementos.");
             Console.WriteLine($"El Elemento de menor valor de la coleccion es: {coleccionable.minimo()}");
             Console.WriteLine($"El Elemento de mayor valor de la coleccion es: {coleccionable.maximo()}");
@@ -277,81 +189,20 @@ namespace Practica_1
             Console.ReadKey();
             Console.Clear();
 
-            Console.WriteLine("Ingrese un numero para elegir el criterio de busqueda:\n1 - por Nombre\n2 - por DNI\n3 - por legajo\n4 - por promedio(el primero que encuentre)");
-            opcion = ingresarEntero(1, 4);
-
-            string nombre = "";
-            Numero dni = new Numero(0);
-            Numero legajo = new Numero(0);
-            Numero promedio = new Numero(0);
             
-            switch (opcion)
-            {
-                case 1:
-                    Console.WriteLine("ingrese el nombre:");
-                    nombre = Console.ReadLine();
-                    break;
-                case 2:
-                    Console.WriteLine("ingrese el dni:");
-                    dni = new Numero(ingresarEntero());
-                    break;
-                case 3:
-                    Console.WriteLine("ingrese el numero de legajo:");
-                    legajo = new Numero(ingresarEntero());
-                    break;
-                case 4:
-                    Console.WriteLine("ingrese el promedio (entre 0 y 10):");
-                    promedio = new Numero(ingresarEntero(0,10));
-                    break;
+            Console.WriteLine("ingrese el numero de legajo:");
+            Numero legajo = new Numero(ingresarEntero());
 
-                default:
-                    break;
-            }
-
-            Alumno alumno = new Alumno(nombre, dni, legajo, promedio);
+            Alumno alumno = new Alumno("", new Numero(0), legajo, new Numero(0));
             
 
             if (coleccionable.contiene(alumno))
-            {                
-                switch (opcion)
-                {
-                    case 1:
-                        Console.WriteLine($"La persona con el nombre {nombre} está en la colección.");
-                        break;
-                    case 2:
-                        Console.WriteLine($"La persona con el dni {dni} está en la colección.");
-                        break;
-                    case 3:
-                        Console.WriteLine($"La persona con el numero de legajo {legajo} está en la colección.");
-                        break;
-                    case 4:
-                        Console.WriteLine($"hay al menos una persona con el promedio {promedio} en la colección.");
-                        break;
-
-                    default:
-                        break;
-                }
+            {
+                Console.WriteLine($"La persona con el numero de legajo {legajo} está en la colección.");
             }
             else
             {
-                switch (opcion)
-                {
-                    case 1:
-                        Console.WriteLine($"La persona con el nombre {nombre} no está en la colección.");
-                        break;
-                    case 2:
-                        Console.WriteLine($"La persona con el dni {dni} no está en la colección.");
-                        break;
-                    case 3:
-                        Console.WriteLine($"La persona con el número de legajo {legajo} no está en la colección.");
-                        break;
-                    case 4:
-                        Console.WriteLine($"No hay ninguna persona con el promedio {promedio} en la colección.");
-                        break;
-
-                    default:
-                        break;
-                }
+                Console.WriteLine($"La persona con el número de legajo {legajo} no está en la colección.");
             }
 
         }
