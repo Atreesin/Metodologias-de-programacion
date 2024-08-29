@@ -33,7 +33,7 @@ ejercicios
              *pero no se podrian haber utilizado un mismo metodo para tratar a los distintos elementos como por ejemplo
              *llenar(coleccionable), informar(coleccionable), etc
              *tendriamos que haber sobrecargado los metodos para cada elemento
-             *y tendriamos metodos para cada elemento como por ejemplo
+             *y tendriamos metodos para cada elemento e incluso clase pila o cola para cada tipo de elemento
              *llenar(pila) llenar(cola)
              *informar(pila), informar(cola), informar(coleccionmultiple), etc
              *y esto llevaria demaciadas lineas de codigo que realiza la misma tarea
