@@ -44,14 +44,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Alumno.cs" />
+    <Compile Include="Classes\ClaveValor.cs" />
     <Compile Include="Classes\Cola.cs" />
     <Compile Include="Classes\ColeccionMultiple.cs" />
+    <Compile Include="Classes\Conjunto.cs" />
+    <Compile Include="Classes\Diccionario.cs" />
+    <Compile Include="Classes\IteradorDeListClaveValor.cs" />
+    <Compile Include="Classes\IteradorDeListComparables.cs" />
     <Compile Include="Classes\Numero.cs" />
     <Compile Include="Classes\NumeroRandom.cs" />
     <Compile Include="Classes\Persona.cs" />
     <Compile Include="Classes\Pila.cs" />
+    <Compile Include="Classes\PorDni.cs" />
+    <Compile Include="Classes\PorLegajo.cs" />
+    <Compile Include="Classes\PorNombre.cs" />
+    <Compile Include="Classes\PorPromedio.cs" />
     <Compile Include="Interfaces\Coleccionable.cs" />
     <Compile Include="Interfaces\Comparable.cs" />
+    <Compile Include="Interfaces\Estrategia.cs" />
+    <Compile Include="Interfaces\Iterable.cs" />
+    <Compile Include="Interfaces\Iterador.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Practica_1
+namespace Practica_2
 {
     //EJERCICIO 2
-    class Numero : Comparable
+    public class Numero : Comparable
     {
         protected int valor;
 

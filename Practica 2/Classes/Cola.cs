@@ -1,14 +1,16 @@
-﻿using System;
+﻿using Practica_2.Classes;
+using Practica_2.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Practica_1
+namespace Practica_2
 {
     //EJERCICIO 4
 
-    class Cola: Coleccionable
+    public class Cola: Coleccionable, Iterable
     {
         private List<Comparable> datos = new List<Comparable>();
 
@@ -41,6 +43,11 @@ namespace Practica_1
             return this.datos.Count == 0;
         }
 
+        public Iterador crearIterador()
+        {
+            return new IteradorDeListComparables(this.datos, this.cuantos());
+
+        }
         
         /* metodos de la interface */
 
@@ -51,6 +58,17 @@ namespace Practica_1
 
         public Comparable minimo()
         {
+            Iterador iterador = crearIterador();
+            Comparable temp = iterador.actual();
+            while (!iterador.fin())
+            {
+                if (iterador.actual().sosMenor(temp))
+                {
+                    temp = iterador.actual();
+                }
+                iterador.siguiente();
+            }
+            /*
             Comparable temp = this.datos[0];
             foreach (Comparable c in this.datos)
             {
@@ -58,12 +76,22 @@ namespace Practica_1
                 {
                     temp = c;
                 }
-            }
+            }*/
             return temp;
         }
 
         public Comparable maximo()
         {
+            Iterador iterador = crearIterador();
+            Comparable temp = iterador.actual();
+            while (!iterador.fin())
+            {
+                if (iterador.actual().sosMayor(temp))
+                {
+                    temp = iterador.actual();
+                }
+                iterador.siguiente();
+            }/*
             Comparable temp = this.datos[0];
             foreach (Comparable c in this.datos)
             {
@@ -71,7 +99,7 @@ namespace Practica_1
                 {
                     temp = c;
                 }
-            }
+            }*/
             return temp;
         }
 
@@ -82,13 +110,23 @@ namespace Practica_1
 
         public bool contiene(Comparable elem)
         {
+            Iterador iterador = crearIterador();
+            while (!iterador.fin())
+            {
+                if ((iterador.actual().sosIgual(elem)))
+                {
+                    return true;
+                }
+                iterador.siguiente();
+            }
+            /*
             foreach (Comparable c in this.datos)
             {
                 if (c.sosIgual(elem))
                 {
                     return true;
                 }
-            }
+            }*/
             return false;
         }
 

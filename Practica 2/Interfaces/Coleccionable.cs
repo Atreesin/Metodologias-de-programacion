@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Practica_1
+namespace Practica_2
 {
     public interface Coleccionable
     {

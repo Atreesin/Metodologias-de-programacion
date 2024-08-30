@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Practica_1.Classes
+namespace Practica_2.Classes
 {
     //EJERCICIO 11
-    class Persona : Comparable
+    public class Persona : Comparable
     {
         protected static string compararPor = "nombre";
         protected string nombre;

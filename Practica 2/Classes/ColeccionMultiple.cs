@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Practica_1.Classes
+namespace Practica_2.Classes
 {
     //EJERCICIO 8
-    class ColeccionMultiple : Coleccionable
+    public class ColeccionMultiple : Coleccionable
     {
         private Pila pila;
         private Cola cola;
