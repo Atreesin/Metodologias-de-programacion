@@ -2,7 +2,6 @@ C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Cla
 C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\practica 1\Practica 2\bin\Debug\Practica 2.exe
 C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\practica 1\Practica 2\bin\Debug\Practica 2.pdb
 C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\practica 1\Practica 2\obj\Debug\Practica 2.csproj.AssemblyReference.cache
-C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\practica 1\Practica 2\obj\Debug\Practica 2.csproj.SuggestedBindingRedirects.cache
 C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\practica 1\Practica 2\obj\Debug\Practica 2.csproj.CoreCompileInputs.cache
 C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\practica 1\Practica 2\obj\Debug\Practica 2.exe
 C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\practica 1\Practica 2\obj\Debug\Practica 2.pdb
