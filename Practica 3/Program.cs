@@ -43,8 +43,10 @@ namespace Practica_3
              * NumeroPromedio = 4
              * Alumno = 5
              * ClaveValor = 6
+             * Profesor = 7
              */
             //PARA LLENAR DICCIONARIOS ES NECESARIO USAR LA OPCION 6
+            /*
             Pila pilaNumeros = new Pila();
             Cola colaNumeros = new Cola();
             Pila pilaAlumnos = new Pila();
@@ -71,15 +73,38 @@ namespace Practica_3
             informar(coleccionMultipleAlumnos, 5);
             informar(conjunto, 5);
             informar(diccionario, 6);
+            */
 
+            //****************************************************
+            Profesor profesor = (Profesor)FabricaDeComparables.crearAleatorio(7);
+
+            Pila pila = new Pila();
+            llenar(pila, 5);
+            AlumnoFavorito favorito = new AlumnoFavorito("Pepito Favorito", (Numero)FabricaDeComparables.crearAleatorio(2), (Numero)FabricaDeComparables.crearAleatorio(3), new Numero(10));
+            agregarObservadores(profesor, pila);
+            agregarObservador(favorito, pila);
+            favorito.agregarObservador(profesor);
+            profesor.agregarObservador(favorito);
+
+            dictadoDeClases(profesor);
 
             Console.ReadKey();
+        }
+
+
+        public static void dictadoDeClases(Profesor profesor)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                profesor.hablarALaClase();
+                profesor.escribirEnElPizzarron();
+            }
         }
 
         //EJERCICIO 6
         public static void llenar(Coleccionable coleccionable, int opcion)
         {
-            Fabrica fabrica = new Fabrica();
+            
             if (coleccionable is ColeccionMultiple)
             {
                 //no estoy seguro si esta es la forma o si deberia implementar una fabrica de coleccion multiple
@@ -87,8 +112,8 @@ namespace Practica_3
                 Cola cola = new Cola();
                 for (int i = 0; i < 20; i++)
                 {
-                    Comparable comparable1 = fabrica.crearAleatorio(opcion);
-                    Comparable comparable2 = fabrica.crearAleatorio(opcion);
+                    Comparable comparable1 = FabricaDeComparables.crearAleatorio(opcion);
+                    Comparable comparable2 = FabricaDeComparables.crearAleatorio(opcion);
                     pila.agregar(comparable1);
                     cola.agregar(comparable2);
                 }
@@ -98,7 +123,7 @@ namespace Practica_3
             {
                 for (int i = 0; i < 20; i++)
                 {
-                    Comparable comparable = fabrica.crearAleatorio(opcion);
+                    Comparable comparable = FabricaDeComparables.crearAleatorio(opcion);
 
                     coleccionable.agregar(comparable);
                 }
@@ -112,8 +137,8 @@ namespace Practica_3
             Console.WriteLine($"El elemento de menor valor de la coleccion es: {coleccionable.minimo()}");
             Console.WriteLine($"El elemento de mayor valor de la coleccion es: {coleccionable.maximo()}");
             Console.WriteLine("ingrese un numero:");
-            Fabrica fabrica = new Fabrica();
-            Comparable comparable = fabrica.crearPorTeclado(opcion);
+            
+            Comparable comparable = FabricaDeComparables.crearPorTeclado(opcion);
             if (coleccionable.contiene(comparable))
             {
                 Console.WriteLine($"El elemento {comparable} esta en la colección.");
@@ -137,7 +162,7 @@ namespace Practica_3
             Comparable dni = new Numero(0);
 
             Console.WriteLine("ingrese el dni:");
-            dni = new Numero(ingresarEntero());
+            dni = FabricaDeComparables.crearPorTeclado(1);
 
             Persona persona = new Persona("", (Numero)dni);
 
@@ -203,6 +228,48 @@ namespace Practica_3
             Console.WriteLine($"[{conjunto}]");
         }
 
+        public static void agregarObservadores(IObservado observado,Iterable c)
+        {
+            Iterador iterador = c.crearIterador();
+            iterador.anterior();
+            while (!iterador.fin())
+            {
+                if (iterador.primero())
+                {
+                    iterador.siguiente();
+                    observado.agregarObservador((IObservador)iterador.actual());
+                    iterador.siguiente();
+                }
+                else
+                {
+                    iterador.actual();
+                    observado.agregarObservador((IObservador)iterador.actual());
+                    iterador.siguiente();
+                }
+            }
+        }
+
+        public static void agregarObservador(IObservador observador, Iterable c)
+        {
+            Iterador iterador = c.crearIterador();
+            iterador.anterior();
+            while (!iterador.fin())
+            {
+                if (iterador.primero())
+                {
+                    iterador.siguiente();
+                    ((IObservado)iterador.actual()).agregarObservador(observador);
+                    iterador.siguiente();
+                }
+                else
+                {
+                    iterador.actual();
+                    ((IObservado)iterador.actual()).agregarObservador(observador);
+                    iterador.siguiente();
+                }
+            }
+        }
+
         public static void cambiarEstrategia(Iterable coleccionable, Estrategia estrategia)
         {
             Iterador iterador = coleccionable.crearIterador();
@@ -226,44 +293,6 @@ namespace Practica_3
             }
         }
 
-
-        //METODOS AUXILIARES
-        public static int ingresarEntero()
-        {
-            int num;
-            try
-            {
-                num = int.Parse(Console.ReadLine());
-            }
-            catch
-            {
-                Console.WriteLine("El valor ingresado es incorrecto. \nPor favor intente de nuevo:");
-                num = ingresarEntero();
-            }
-            return num;
-        }
-        public static int ingresarEntero(int min, int max)
-        {
-            int num;
-            try
-            {
-                num = int.Parse(Console.ReadLine());
-            }
-            catch
-            {
-                Console.WriteLine("El valor ingresado es incorrecto. \nPor favor intente de nuevo:");
-                num = ingresarEntero(min, max);
-            }
-            if (num >= min && num <= max)
-            {
-                return num;
-            }
-            else
-            {
-                Console.WriteLine($"Debe ingresar un numero entre: {min} y {max}");
-                return ingresarEntero(min, max);
-            }
-
-        }
+        
     }
 }

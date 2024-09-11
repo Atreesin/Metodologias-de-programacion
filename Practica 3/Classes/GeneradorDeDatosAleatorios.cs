@@ -11,9 +11,9 @@ namespace Practica_3
     {
         //posiblemente estoy utilizando mal Random y hay una forma mas facil de utilizarlo
         private static Random unicoRandomGlobal = new Random();
-        public static Numero numeroAleatorio(int max)
+        public static int numeroAleatorio(int max)
         {
-            return new Numero((new NumeroRandom(unicoRandomGlobal)).RandomUnico(max));
+            return new NumeroRandom(unicoRandomGlobal).RandomUnico(max);
         }
 
         public static string stringAleatorio(int cantidad)

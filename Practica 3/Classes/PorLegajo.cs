@@ -46,7 +46,7 @@ namespace Practica_3.Classes
         }
         public override string ToString()
         {
-            return "legajo";
+            return "Legajo";
         }
     }
 }

@@ -8,10 +8,10 @@ namespace Practica_3
 {
     public static class LectorDeDatos
     {
-        public static Numero numeroPorTeclado()
+        public static int numeroPorTeclado()
         {
             Console.WriteLine("Ingrese un numero:");
-            Numero numero = new Numero(comprobarEntero());
+            int numero = comprobarEntero();
             return numero;
         }
 

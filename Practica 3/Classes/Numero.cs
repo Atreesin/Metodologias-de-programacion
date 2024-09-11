@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Practica_3
 {
-    //EJERCICIO 2
+    
     public class Numero : Comparable
     {
         protected int valor;
@@ -66,36 +66,7 @@ namespace Practica_3
             }
         }
         
-        //metodos auxiliares
-        /*
-        private int CompareTo(Object obj)
-        {
-            var n = obj as Numero;
-            int resultado = 0;
-
-            if (n != null)
-            {
-                if (this.getValor() < n.getValor())
-                {
-                    resultado = -1;
-                }
-                else if (this.getValor() == n.getValor())
-                {
-                    resultado = 0;
-                }
-                else if (this.getValor() > n.getValor())
-                {
-                    resultado = 1;
-                }
-            }
-            else
-            {
-                throw (new Exception("no se puede comparar el valor null"));
-            }
-
-            return resultado;
-        }
-        */
+     
 
         public override string ToString()
         {

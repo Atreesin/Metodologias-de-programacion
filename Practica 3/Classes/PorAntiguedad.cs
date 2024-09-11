@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Practica_3.Classes
 {
-    public class PorDni : Estrategia
+    public class PorAntiguedad : Estrategia
     {
-        public bool sosIgual(Comparable alumno1, Comparable alumno2)
+        public bool sosIgual(Comparable profesor1, Comparable profesor2)
         {
-            if ((((Alumno)alumno1).getDni()).sosIgual(((Alumno)alumno2).getDni()))
+            if ((((Profesor)profesor1).getAntiguedad()).sosIgual(((Profesor)profesor2).getAntiguedad()))
             {
                 return true;
             }
@@ -21,9 +21,9 @@ namespace Practica_3.Classes
             }
         }
 
-        public bool sosMenor(Comparable alumno1, Comparable alumno2)
+        public bool sosMenor(Comparable profesor1, Comparable profesor2)
         {
-            if ((((Alumno)alumno1).getDni()).sosMenor(((Alumno)alumno2).getDni()))
+            if ((((Profesor)profesor1).getAntiguedad()).sosMenor(((Profesor)profesor2).getAntiguedad()))
             {
                 return true;
             }
@@ -33,9 +33,9 @@ namespace Practica_3.Classes
             }
         }
 
-        public bool sosMayor(Comparable alumno1, Comparable alumno2)
+        public bool sosMayor(Comparable profesor1, Comparable profesor2)
         {
-            if ((((Alumno)alumno1).getDni()).sosMayor(((Alumno)alumno2).getDni()))
+            if ((((Profesor)profesor1).getAntiguedad()).sosMayor(((Profesor)profesor2).getAntiguedad()))
             {
                 return true;
             }
@@ -44,10 +44,9 @@ namespace Practica_3.Classes
                 return false;
             }
         }
-
         public override string ToString()
         {
-            return "Dni";
+            return "Antiguedad";
         }
     }
 }
