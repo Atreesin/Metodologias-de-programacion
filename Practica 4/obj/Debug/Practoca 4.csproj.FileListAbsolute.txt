@@ -1,0 +1,7 @@
+C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\practica 1\Practoca 4\bin\Debug\Practica 4.exe.config
+C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\practica 1\Practoca 4\bin\Debug\Practica 4.exe
+C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\practica 1\Practoca 4\bin\Debug\Practica 4.pdb
+C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\practica 1\Practoca 4\obj\Debug\Practoca 4.csproj.AssemblyReference.cache
+C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\practica 1\Practoca 4\obj\Debug\Practoca 4.csproj.CoreCompileInputs.cache
+C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\practica 1\Practoca 4\obj\Debug\Practica 4.exe
+C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\practica 1\Practoca 4\obj\Debug\Practica 4.pdb

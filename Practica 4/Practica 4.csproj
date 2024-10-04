@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{95A928CA-B215-47A3-A81C-B6E347D99882}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Practica_4</RootNamespace>
+    <AssemblyName>Practica 4</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Adapter\IterableAdapter.cs" />
+    <Compile Include="Classes\Adapter\IteradorAdapter.cs" />
+    <Compile Include="Classes\AlumnoNormal.cs" />
+    <Compile Include="Classes\Adapter\AlumnoAdapter.cs" />
+    <Compile Include="Classes\Comparable\IAlumnoComparer.cs" />
+    <Compile Include="Classes\Decorator\AlumnoDecorator.cs" />
+    <Compile Include="Classes\AlumnoFavorito.cs" />
+    <Compile Include="Classes\AlumnoMuyEstudioso.cs" />
+    <Compile Include="Classes\Comparable\ClaveValor.cs" />
+    <Compile Include="Classes\Coleccionable\Cola.cs" />
+    <Compile Include="Classes\Coleccionable\ColeccionMultiple.cs" />
+    <Compile Include="Classes\Coleccionable\Conjunto.cs" />
+    <Compile Include="Classes\Decorator\ConAsteriscos.cs" />
+    <Compile Include="Classes\Decorator\ConEstado.cs" />
+    <Compile Include="Classes\Decorator\ConLegajo.cs" />
+    <Compile Include="Classes\Coleccionable\Diccionario.cs" />
+    <Compile Include="Classes\Decorator\ConLetras.cs" />
+    <Compile Include="Classes\Decorator\ConNumeroDeOrden.cs" />
+    <Compile Include="Classes\Factory\FabricaDeComparables.cs" />
+    <Compile Include="Classes\Factory\GeneradorDeDatosAleatorios.cs" />
+    <Compile Include="Classes\Comparable\IAlumno.cs" />
+    <Compile Include="Classes\Factory\FabricaDeAlumnos.cs" />
+    <Compile Include="Classes\Iterator\IteradorDeListClaveValor.cs" />
+    <Compile Include="Classes\Iterator\IteradorDeListComparables.cs" />
+    <Compile Include="Classes\Factory\LectorDeDatos.cs" />
+    <Compile Include="Classes\Comparable\Numero.cs" />
+    <Compile Include="Classes\NumeroRandom.cs" />
+    <Compile Include="Classes\Comparable\Persona.cs" />
+    <Compile Include="Classes\Coleccionable\Pila.cs" />
+    <Compile Include="Classes\Estrategy\PorAntiguedad.cs" />
+    <Compile Include="Classes\Estrategy\PorCalificacion.cs" />
+    <Compile Include="Classes\Estrategy\PorDni.cs" />
+    <Compile Include="Classes\Estrategy\PorLegajo.cs" />
+    <Compile Include="Classes\Estrategy\PorNombre.cs" />
+    <Compile Include="Classes\Estrategy\PorPromedio.cs" />
+    <Compile Include="Classes\Observer\Profesor.cs" />
+    <Compile Include="Interfaces\Coleccionable.cs" />
+    <Compile Include="Interfaces\Comparable.cs" />
+    <Compile Include="Interfaces\Estrategia.cs" />
+    <Compile Include="Interfaces\IObservado.cs" />
+    <Compile Include="Interfaces\IObservador.cs" />
+    <Compile Include="Interfaces\Iterable.cs" />
+    <Compile Include="Interfaces\Iterador.cs" />
+    <Compile Include="MDPI.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
