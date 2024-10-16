@@ -1,0 +1,7 @@
+C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\practica 1\Practica 6\obj\Debug\Practica 6.csproj.AssemblyReference.cache
+C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\practica 1\Practica 6\obj\Debug\Practica 6.csproj.CoreCompileInputs.cache
+C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\practica 1\Practica 6\bin\Debug\Practica 6.exe.config
+C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\practica 1\Practica 6\bin\Debug\Practica 6.exe
+C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\practica 1\Practica 6\bin\Debug\Practica 6.pdb
+C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\practica 1\Practica 6\obj\Debug\Practica 6.exe
+C:\Users\atree\Desktop\ingenieria informatica\Metodologias de Programacion I\Clase 1\codigo\practica 1\Practica 6\obj\Debug\Practica 6.pdb
